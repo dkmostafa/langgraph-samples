@@ -55,14 +55,18 @@ def build_graph(llm,tools):
 app = build_graph(llm,tools)
 
 
+mermaid = app.get_graph().draw_mermaid()
+with open("graph.mmd", "w") as f:
+    f.write(mermaid)
 
-init_state = GraphState(
-    user_input='get me the customer total investments and the customer user_type for customer with an id of 1',
-)
-
-res = app.invoke(init_state)
-
-print(res['results'])
+#
+# init_state = GraphState(
+#     user_input='get me the customer total investments and the customer user_type for customer with an id of 1',
+# )
+#
+# res = app.invoke(init_state)
+#
+# print(res['results'])
 
 
 
