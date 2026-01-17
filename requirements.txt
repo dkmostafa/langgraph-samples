@@ -1,0 +1,6 @@
+langgraph
+langchain
+dotenv
+langchain-groq
+pytest
+pydantic
